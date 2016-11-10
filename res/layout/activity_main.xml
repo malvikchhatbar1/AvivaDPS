@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEDD0F"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context="com.javacodegeeks.androidstartactivityforresultexample.ActivityOne" >
+    
+	<Button
+	    android:id="@+id/scanner"
+	    android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:onClick="scanQR"
+        android:background="#0267B2"
+        android:textColor="#FEDD0F"
+        android:text="Scan QR Code"
+        android:textSize="18dp" >
+    </Button>
+	
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0267B2"
+        android:text="Content:" 
+        android:textSize="20dp" 
+        android:layout_below="@+id/scanner"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_marginTop="15dp"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:textColor="#9C1671"
+        android:layout_below="@+id/textView2"
+        android:text="Please Scan..."
+        android:textSize="10dp"  />
+    
+    <Button
+        android:id="@+id/getPolicy"
+	    android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:onClick="getPolicy"
+        android:background="#0267B2"
+        android:layout_below="@+id/textView3"
+        android:textColor="#FEDD0F"
+        android:text="Retrieve Policy"
+        android:textSize="18dp" >
+    </Button>
+
+   <TextView
+        android:id="@+id/textView4"
+        android:layout_marginTop="15dp"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:textColor="#9C1671"
+        android:text=""
+        android:textSize="5dp"  />
+   
+   
+    <TextView
+        android:id="@+id/policyNumberKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
+        android:text="Policy Number"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/policyNumberVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/policyNumberKey"
+        android:layout_below="@+id/policyNumberKey"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/effectiveDateKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/policyNumberVal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Effective Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/effectiveDateVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/effectiveDateKey"
+        android:layout_below="@+id/effectiveDateKey"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/expiryDateVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expiryDateKey"
+        android:layout_below="@+id/expiryDateKey"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/expiryDateKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/effectiveDateVal"
+        android:layout_alignLeft="@+id/policyNumberVal"
+        android:text="Expiry Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+	    android:visibility="invisible" />
+    
+    <TextView
+        android:id="@+id/nameAddOfInsuredKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/effectiveDateVal"
+        android:text="Name and Address of Insured"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+	    android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/nameOfInsuredVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameAddOfInsuredKey"
+        android:layout_below="@+id/nameAddOfInsuredKey"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+	    android:visibility="invisible" />
+    
+    <TextView
+        android:id="@+id/addressOfInsuredVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameOfInsuredVal"
+        android:layout_below="@+id/nameOfInsuredVal"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+	    android:visibility="invisible" />
+    
+	<TableLayout
+        android:id="@+id/vehicleTable"
+	    android:layout_width="match_parent"
+	    android:layout_below="@+id/addressOfInsuredVal"
+	    android:layout_marginTop="30dp"
+	    android:layout_height="60dp"
+	    android:visibility="invisible" >
+	
+	    <TableRow
+	        android:background="#0267B2"
+	        android:textColor="#FEDD0F"
+	        android:padding="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="Year"
+	        	android:textColor="#FEDD0F" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="Make"
+	        	android:textColor="#FEDD0F" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="Model"
+	        	android:textColor="#FEDD0F" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="Serial Number"
+	        	android:textColor="#FEDD0F" />
+	    </TableRow>
+	
+	    <TableRow
+	        android:background="#ECEFF1"
+	        android:padding="5dp">
+	        <TextView
+	            android:id="@+id/year"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"/>
+	        <TextView
+	            android:id="@+id/make"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"/>
+	        <TextView
+	            android:id="@+id/model"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1" />
+	        <TextView
+	            android:id="@+id/vin"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"/>
+	    </TableRow>
+    </TableLayout>
+
+	<TextView
+	    android:id="@+id/liabilityCardType"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/vehicleTable"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="23dp"
+	    android:gravity="center"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:visibility="invisible" />
+
+	<ImageView
+	    android:id="@+id/imageView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="50dp"
+	    android:layout_alignLeft="@+id/effectiveDateKey"
+	    android:layout_below="@+id/textView4"
+	    android:src="@drawable/logo3" />
+   
+</RelativeLayout>

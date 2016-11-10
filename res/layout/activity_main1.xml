@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEDD0F"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context="com.javacodegeeks.androidstartactivityforresultexample.ActivityOne" >
+    
+    <ImageView
+	    android:id="@+id/imageView1"
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:layout_marginTop="30dp"
+       	android:gravity="center"
+       	android:layout_centerHorizontal="true"
+	    android:src="@drawable/logo3"
+        android:layout_alignParentTop="true" />
+    
+	<Button
+	    android:id="@+id/scanner"
+	    android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:onClick="scanQR"
+        android:background="#0267B2"
+        android:textColor="#FEDD0F"
+        android:text="Scan QR Code"
+        android:textSize="18dp"
+        android:layout_below="@+id/imageView1" >
+    </Button>
+	
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0267B2"
+        android:text="Content:" 
+        android:textSize="20dp" 
+        android:layout_below="@+id/scanner"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_marginTop="15dp"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:textColor="#9C1671"
+        android:layout_below="@+id/textView2"
+        android:text="Please Scan..."
+        android:textSize="10dp" 
+        android:visibility="invisible"/>
+    
+    <Button
+        android:id="@+id/getPolicy"
+	    android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:onClick="getPolicy"
+        android:background="#0267B2"
+        android:layout_below="@+id/textView3"
+        android:textColor="#FEDD0F"
+        android:text="Retrieve Policy"
+        android:textSize="18dp"
+        android:enabled="false" >
+    </Button>
+    
+
+   <TextView
+        android:id="@+id/textView4"
+        android:layout_marginTop="15dp"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:textColor="#9C1671"
+        android:text=""
+        android:textSize="5dp"  />
+
+	     
+     <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0267B2"
+	    android:layout_gravity="center"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+        android:text="Tuesday 12 January, 2016"
+        android:visibility="invisible"
+        android:layout_below="@+id/imageView1"
+	    android:textAppearance="?android:attr/textAppearanceMedium"  />
+     
+     <LinearLayout
+         android:id="@+id/detailsList"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/textViewDate"
+    	 android:orientation="vertical" >
+
+         <TextView
+            android:id="@+id/insuranceProviderKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Insurance Provider"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+         
+         <TextView
+	        android:id="@+id/insuranceProviderVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+        	android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+	        android:text=""
+		    android:visibility="invisible" />
+         
+         <TextView
+	        android:id="@+id/policyNumberKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Policy Number"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/policyNumberVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/expiryDateKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Valid Upto"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	    
+	    <TextView
+	        android:id="@+id/expiryDateVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	    
+         <TextView
+	        android:id="@+id/policyStatusKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Policy Status"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/policyStatusVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#2D8731"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+	        android:textStyle="bold"
+		    android:visibility="invisible" />
+	    
+	    <TextView
+	        android:id="@+id/nameAddOfInsuredKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Customer Name"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/nameOfInsuredVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	    
+	    <TextView
+	        android:id="@+id/makeKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Vehicle Make"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/makeVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	    
+	    <TextView
+	        android:id="@+id/modelKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Vehicle Model"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/modelVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	    
+	     <TextView
+	        android:id="@+id/vinKey"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Vehicle Identification Number"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:visibility="invisible" />
+	
+	    <TextView
+	        android:id="@+id/vinVal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+       		android:textColor="#0267B2"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:visibility="invisible" />
+	    
+     </LinearLayout>
+   
+	
+</RelativeLayout>
